@@ -2,12 +2,16 @@ package com.example.crawling.dto.respones;
 
 import com.example.crawling.domain.Product;
 import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 import org.hibernate.mapping.Array;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+@Getter
+@NoArgsConstructor
 public class ProductSimpleRes {
 
     private Long productId;

@@ -2,7 +2,11 @@ package com.example.crawling.dto.respones;
 
 import com.example.crawling.domain.Product;
 import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
+@Getter
+@NoArgsConstructor
 public class ProductDetailRes {
 
     private Long productId;
