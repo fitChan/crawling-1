@@ -10,6 +10,7 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor
 @Entity
+@Table(name = "product")
 public class Product{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
@@ -27,4 +28,17 @@ public class Product{
     private String productName;
     @Column(nullable = false)
     private String description;
+    @Column(nullable = false)
+    private String amount;
+    @Column(nullable = false)
+    private String unit;
+    @Column(nullable = false)
+    private String delivery;
+    @Column(nullable = false)
+    private String packing;
+    @Column(nullable = false)
+    private String expiryDate;
+    @Column(nullable = false)
+    private String keeping;
+
 }
