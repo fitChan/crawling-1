@@ -15,10 +15,17 @@ public class ProductDetailRes {
     private String price;
     private String description;
     private String country;
+    private String amount;
+    private String unit;
+    private String delivery;
+    private String packing;
+    private String keeping;
     private String information;
 
+
+
     @Builder
-    public ProductDetailRes(Long productId, String productName, String productImg, String price, String description, String country, String information) {
+    public ProductDetailRes(Long productId, String productName, String productImg, String price, String description, String country, String information, String amount, String unit, String delivery, String packing, String keeping) {
         this.productId = productId;
         this.productName = productName;
         this.productImg = productImg;
@@ -26,6 +33,12 @@ public class ProductDetailRes {
         this.description = description;
         this.country = country;
         this.information = information;
+        this.amount = amount;
+        this.unit = unit;
+        this.delivery = delivery;
+        this.packing = packing;
+        this.keeping = keeping;
+
     }
     public static ProductDetailRes of(Product product){
         return ProductDetailRes.builder()
@@ -35,7 +48,12 @@ public class ProductDetailRes {
                 .price(product.getPrice())
                 .description(product.getDescription())
                 .country(product.getCountry())
-                .information(product.getInformation()).build();
+                .information(product.getInformation())
+                .amount(product.getAmount())
+                .unit(product.getUnit())
+                .delivery(product.getDelivery())
+                .packing(product.getPacking())
+                .keeping(product.getKeeping()).build();
     }
 }
 
